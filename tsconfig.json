@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./lib",
+    "removeComments": true,
+    "noUnusedLocals": true,
+    "types": [
+      "node",
+      "jest",
+    ],
+    "lib": [
+      "es2018"
+    ]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    ".git",
+    "node_modules/**/node_modules",
+    "src/**/*.spec.ts"
+  ]
+}

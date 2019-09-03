@@ -1,0 +1,53 @@
+{
+  "name": "football-pitch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf ./lib && npx tsc",
+    "test": "jest --config jestconfig.json",
+    "lint": "npx tslint 'src/**/*.ts'",
+    "lint:fix": "npx tslint 'src/**/*.ts' --fix"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nlapshin/football-pitch.git"
+  },
+  "author": "Nikolay Lapshin <nlapshin1989@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nlapshin/football-pitch/issues"
+  },
+  "homepage": "https://github.com/nlapshin/football-pitch#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.3",
+    "jest": "^24.9.0",
+    "pre-commit": "^1.2.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "ts-node-register": "^1.0.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "mathjs": "^6.2.1"
+  }
+}
